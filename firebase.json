@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "site": "ipsem2",
+    "public": "web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "cleanurls": true,
+    "trailingSlash": false
+  }
+}
