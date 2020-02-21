@@ -1,4 +1,4 @@
-const staticCacheName = "smartWater-0.1.0";
+const staticCacheName = "smartWater-0.1.3";
 
 const staticCacheFileNames = [];
 
