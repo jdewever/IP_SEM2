@@ -1,0 +1,61 @@
+:root {
+  --text-color: white;
+  --background-color: black;
+  --primary-color: #141414;
+  --secondary-color: #404040;
+  --tertiary-color: #a6a6a6;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+	color: var(--text-color);
+	background-color: var(--background-color);
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+}
+
+nav {
+	background: var(--background-color);
+	border-bottom: 5px solid var(--secondary-color);
+}
+
+nav a {
+	text-transform: uppercase;
+}
+
+nav a span {
+	font-weight: bold;
+}
+
+nav .sidenav-trigger {
+	margin: 0;
+}
+
+#side-menu {
+	background: var(--primary-color);
+}
+
+#side-menu .subheader {
+	color: var(--tertiary-color);
+}
+
+#side-menu .subheader span {
+	font-weight: bold;
+}
+
+#side-menu .divider {
+	background-color: var(--secondary-color);
+}
+
+#side-menu li a, #side-menu i {
+	color: var(--text-color);
+}
+
+.app {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  text-align: center;
+}
