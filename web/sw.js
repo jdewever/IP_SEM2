@@ -1,4 +1,4 @@
-const staticCacheName = "smartWater-0.1.3";
+const staticCacheName = "smartWater-0.1.4";
 
 const staticCacheFileNames = [];
 
@@ -8,9 +8,9 @@ self.addEventListener("install", (event) => {
     caches.open(staticCacheName)
       .then((cache) => {
         cache.addAll([
-          "/",
+          //"/",
           "manifest.json",
-          ...staticCacheFileNames
+          //...staticCacheFileNames
         ]);
       })
       .catch((error) => {

@@ -2,65 +2,86 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="theme-color" content="#141414" />
-  <meta name=Description content="Smart Water" />
-  <title>Smart Water</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#141414" />
+    <meta name=Description content="Smart Water" />
+    <title>Smart Water</title>
 
-  <!--Import StyleSheets-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
-  <link type="text/css" rel="stylesheet" href="/css/index.css" />
-  <link rel="manifest" href="/manifest.json" />
+    <!--Import StyleSheets-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/css/common.css" />
+    <link rel="manifest" href="/manifest.json" />
 
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="/img/icons/icon-192x192.png">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/icons/icon-192x192.png">
 </head>
 
 <body>
-  <header id="navigation">
-    <!--Top Navigation-->
-    <nav class="z-depth-0">
-      <div class="nav-wrapper container">
-        <a href="/">Smart<span>Water</span></a>
-        <span class="right grey-text text-lighten-3">
-          <i class="material-icons sidenav-trigger" style="font-size: 2em" data-target="side-menu">menu</i>
-        </span>
-      </div>
-    </nav>
+    <header id="navigation">
+        <!--Top Navigation-->
+        <nav class="z-depth-0">
+            <div class="nav-wrapper container">
+                <a href="/">Smart<span>Water</span></a>
+                <span class="right grey-text text-lighten-3">
+                    <i class="material-icons sidenav-trigger" style="font-size: 2em" data-target="side-menu">menu</i>
+                </span>
+            </div>
+        </nav>
 
-    <!--Side Navigation-->
-    <ul id="side-menu" class="sidenav side-menu">
-      <li>
-        <a class="subheader">Smart<span>Water</span></a>
-      </li>
-      <li><a href="/" class="waves-effect">Home</a></li>
-      <li>
-        <div class="divider"></div>
-      </li>
-      <li>
-        <a href="/html/about.html" class="waves-effect">
-          <i class="material-icons">info</i>About</a>
-      </li>
-      <li>
-        <a href="/html/contact.html" class="waves-effect">
-          <i class="material-icons">mail_outline</i>Contact</a>
-      </li>
-    </ul>
-  </header>
+        <!--Side Navigation-->
+        <ul id="side-menu" class="sidenav side-menu">
+            <li>
+                <a class="subheader">Smart<span>Water</span></a>
+            </li>
+            <li><a href="/" class="waves-effect">Home</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li>
+                <a href="#" class="waves-effect">
+                    <i class="material-icons">info</i>About</a>
+            </li>
+            <li>
+                <a href="#" class="waves-effect">
+                    <i class="material-icons">mail_outline</i>Contact</a>
+            </li>
+        </ul>
+    </header>
 
-  <!--Content-->
-  <main class="app">
-    Content
-  </main>
+    <!--Content-->
+    <main class="app">
+        <button type="button" id=latestButton class="collapsible">Latest data</button>
+        <div id=latestData class="collapseContent">
+            latestData
+        </div>
 
-  <script src="/js/materialize.min.js"></script>
-  <script src="/js/app.js"></script>
-  <script src="/js/ui.js"></script>
+        <button type="button" class="collapsible">History</button>
+        <div id=historyData class="collapseContent">
+            <canvas id="saltGraph"></canvas>
+            <canvas id="turbGraph"></canvas>
+            <canvas id="tempGraph"></canvas>
+            <canvas id="volGraph"></canvas>
+        </div>
+    </main>
+
+    <script src="/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <script src="/js/app.js"></script>
+
+    <!--Firebase built-in CDN when hosting on Firebase Hosting-->
+    <script src="/__/firebase/7.14.1/firebase-app.js"></script>
+    <script src="/__/firebase/7.14.1/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.14.1/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="/js/ui.js"></script>
+    <script src="/js/graphs.js"></script>
+    <script defer src="/js/index.js"></script>
 </body>
 
 </html>

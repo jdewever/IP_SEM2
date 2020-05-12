@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "ipsem2",
     "public": "web",
     "ignore": [
       "firebase.json",
